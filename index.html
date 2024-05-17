@@ -25,8 +25,8 @@
             position: absolute;
             top: 20px;
             left: 20px;
-            font-size: 20px;
-            background-color: green;
+            font-size: 40px;
+       
             color: white;
             padding: 10px 20px;
             cursor: pointer;
@@ -148,11 +148,11 @@
     <div class="message">HAPPY BIRTHDAY<br>ALTER OPA</div>
 
     <!-- This div is initially hidden and will appear after clicking the first button -->
-    <div class="button4" onclick="openGift()">geschenk</div>
+    <div class="button4" onclick="openGift()" onclick="self.close()">🎁</div>
 
-    <div id="giftDiv" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: white; padding: 20px; border: 2px solid rgba(25, 245, 0, 0.985); text-align: center;">
-        tolles dinner mit Naturwein und Kim <br>💖 bussiii love youuuuu 💖<br>
-        <a href="https://www.google.com/maps/place/Café+Kandl/@48.2028918,16.3442032,15z/data=!4m6!3m5!1s0x476d07f294a4150b:0xeaaf03fe16c7ef2e!8m2!3d48.2028918!4d16.3442032!16s%2Fg%2F1td16n15?entry=ttu" target="_blank">Café Kandl</a>
+    <div id="giftDiv" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: white; padding: 20px; border: 2px dotted rgba(245, 0, 188, 0.985); text-align: center;">
+        Tolles Dinner mit Naturwein und Kim <br>💖 bussiii love youuuuu 💖<br>
+        <a href="https://www.google.com/maps/place/Café+Kandl/@48.2028918,16.3442032,15z/data=!4m6!3m5!1s0x476d07f294a4150b:0xeaaf03fe16c7ef2e!8m2!3d48.2028918!4d16.3442032!16s%2Fg%2F1td16n15?entry=ttu" target="_blank">vielleicht hier?</a>
     </div>
 
     <script>
@@ -163,7 +163,7 @@
             startBouncingImages();
             startMarquees();
 
-            // Show the "geschenk" button after the first button is clicked
+            
             document.querySelector('.button4').style.display = 'block';
         }
 
