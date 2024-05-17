@@ -26,7 +26,6 @@
             top: 20px;
             left: 20px;
             font-size: 40px;
-       
             color: white;
             padding: 10px 20px;
             cursor: pointer;
@@ -151,7 +150,7 @@
     <div class="message">HAPPY BIRTHDAY<br>ALTER OPA</div>
 
     <!-- This div is initially hidden and will appear after clicking the first button -->
-    <div class="button4" onclick="openGift()" onclick="self.close()">🎁</div>
+    <div class="button4" onclick="openGift()">🎁</div>
 
     <div id="giftDiv" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: white; padding: 20px; border: 2px dotted rgba(245, 0, 188, 0.985); text-align: center;">
         Tolles Dinner mit Naturwein und Kim <br>💖 bussiii love youuuuu 💖<br>
@@ -166,7 +165,6 @@
             startBouncingImages();
             startMarquees();
 
-            
             document.querySelector('.button4').style.display = 'block';
         }
 
@@ -189,8 +187,9 @@
                 img.src = src;
                 img.className = 'bouncing-image';
                 img.style.left = `${Math.random() * 80}vw`;
-                img.style.top = `${Math.random() * 80}vh`;
-                img.style.animationDuration = `${Math.random() * 5 + 3}s`;
+                img.style.top = `${Math.random() * 70}vh`;
+                img.style.animationDuration = `${Math.random() * 10 + 5}s`; // Slower animation speed
+                img.addEventListener('click', () => toggleAnimation(img));
                 document.body.appendChild(img);
             });
         }
@@ -215,6 +214,14 @@
             });
         }
 
+        function toggleAnimation(img) {
+            if (img.style.animationPlayState === 'paused') {
+                img.style.animationPlayState = 'running';
+            } else {
+                img.style.animationPlayState = 'paused';
+            }
+        }
+
         function openGift() {
             const giftDiv = document.getElementById('giftDiv');
             giftDiv.style.display = 'block';
@@ -222,5 +229,3 @@
     </script>
 </body>
 </html>
-
-               
