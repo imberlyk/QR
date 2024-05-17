@@ -1,22 +1,36 @@
-
-@font-face {
-	font-family: 'Wagon';
-	src: url('../fonts/Wagon-ExtraLight.otf') format('otf');
-	font-weight: normal;
-	font-style: normal;
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+    font-family: 'Fantasy', sans-serif;
 }
-
-
-
-@font-face {
-	font-family: 'lunch';
-	src: url('../fonts/lunchtype24-regular-expanded-webfont.woff2') format('woff2');
-	font-weight: normal;
-	font-style: normal;
+.button {
+    padding: 20px 40px;
+    font-size: 24px;
+    cursor: pointer;
 }
-
-
-marquee{
-	font-size: 5vh;
-	font-family: fantasy;
+.message {
+    display: none;
+    font-size: 36px;
+    text-align: center;
+}
+.confetti {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    width: 15px;
+    height: 15px;
+    background-color: #ff0;
+    animation: fall linear infinite;
+}
+@keyframes fall {
+    0% {
+        transform: translateY(-100vh);
+    }
+    100% {
+        transform: translateY(100vh);
+    }
 }
